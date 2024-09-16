@@ -182,3 +182,10 @@ def save_model(path="dqn_model.pth"):
     
     else:
         print("Error: Model is not initialized and cannot be saved.")
+
+def update_target_model():
+    """
+    Update the target model's weights to be the same as the main model.
+    """
+    common.target_model.load_state_dict(common.model.state_dict())
+    common.target_model.eval()  # Set the target model to evaluation mode

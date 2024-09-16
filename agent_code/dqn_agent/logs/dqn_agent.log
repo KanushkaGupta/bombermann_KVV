@@ -1,14 +1,16 @@
-2024-09-16 21:33:00,692 [dqn_agent_code] INFO: DQN Agent setup complete.
-2024-09-16 21:33:01,348 [dqn_agent_code] DEBUG: Exploration: Chose random action RIGHT
-2024-09-16 21:33:01,365 [dqn_agent_code] DEBUG: Exploration: Chose random action LEFT
-2024-09-16 21:33:01,468 [dqn_agent_code] DEBUG: Exploration: Chose random action LEFT
-2024-09-16 21:33:01,577 [dqn_agent_code] DEBUG: Exploration: Chose random action DOWN
-2024-09-16 21:33:01,668 [dqn_agent_code] DEBUG: Exploration: Chose random action WAIT
-2024-09-16 21:33:01,778 [dqn_agent_code] DEBUG: Exploration: Chose random action LEFT
-2024-09-16 21:33:01,874 [dqn_agent_code] DEBUG: Exploration: Chose random action UP
-2024-09-16 21:33:01,980 [dqn_agent_code] DEBUG: Exploration: Chose random action WAIT
-2024-09-16 21:33:02,076 [dqn_agent_code] DEBUG: Exploration: Chose random action BOMB
-2024-09-16 21:33:02,176 [dqn_agent_code] DEBUG: Exploration: Chose random action UP
-2024-09-16 21:33:02,277 [dqn_agent_code] DEBUG: Exploration: Chose random action UP
-2024-09-16 21:33:02,377 [dqn_agent_code] DEBUG: Exploration: Chose random action UP
-2024-09-16 21:33:02,478 [dqn_agent_code] DEBUG: Exploration: Chose random action LEFT
+2024-09-16 21:55:28,717 [dqn_agent_code] INFO: DQN Agent setup complete.
+2024-09-16 21:55:29,961 [dqn_agent_code] DEBUG: Exploration: Chose random action DOWN
+2024-09-16 21:55:29,997 [dqn_agent_code] DEBUG: Exploration: Chose random action RIGHT
+2024-09-16 21:55:30,159 [dqn_agent_code] DEBUG: Exploration: Chose random action RIGHT
+2024-09-16 21:55:30,349 [dqn_agent_code] DEBUG: Exploration: Chose random action DOWN
+2024-09-16 21:55:30,379 [dqn_agent_code] DEBUG: Exploration: Chose random action DOWN
+2024-09-16 21:55:30,494 [dqn_agent_code] DEBUG: Exploration: Chose random action RIGHT
+2024-09-16 21:55:30,600 [dqn_agent_code] DEBUG: Exploration: Chose random action LEFT
+2024-09-16 21:55:30,683 [dqn_agent_code] DEBUG: Exploration: Chose random action DOWN
+2024-09-16 21:55:30,788 [dqn_agent_code] DEBUG: Exploration: Chose random action UP
+2024-09-16 21:55:30,874 [dqn_agent_code] DEBUG: Exploration: Chose random action DOWN
+2024-09-16 21:55:30,986 [dqn_agent_code] DEBUG: Exploration: Chose random action BOMB
+2024-09-16 21:55:31,084 [dqn_agent_code] DEBUG: Exploration: Chose random action UP
+2024-09-16 21:55:31,180 [dqn_agent_code] DEBUG: Exploration: Chose random action DOWN
+2024-09-16 21:55:31,280 [dqn_agent_code] DEBUG: Exploration: Chose random action DOWN
+2024-09-16 21:55:31,378 [dqn_agent_code] DEBUG: Exploration: Chose random action BOMB
