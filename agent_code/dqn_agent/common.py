@@ -1,15 +1,11 @@
-# agent_code/dqn_agent/common.py
-
 import torch
 import torch.nn as nn
 import torch.optim as optim
 from collections import deque
 import numpy as np
 
-# Define available actions
-ACTIONS = ['UP', 'RIGHT', 'DOWN', 'LEFT', 'WAIT', 'BOMB']
 
-# Set device (GPU if available, else CPU)
+ACTIONS = ['UP', 'RIGHT', 'DOWN', 'LEFT', 'WAIT', 'BOMB']
 DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 # Hyperparameters
@@ -18,11 +14,11 @@ LEARNING_RATE = 0.001
 BATCH_SIZE = 64
 TARGET_UPDATE = 1000
 MEMORY_SIZE = 10000
-EPSILON_START = 1.0
-EPSILON_END = 0.1
+EPSILON_START = 0.5
+EPSILON_END = 0.05
 EPSILON_DECAY = 0.995
 
-# DQN Model Definition
+# DQN Model
 class DQN(nn.Module):
     def __init__(self, input_dim, output_dim):
         super(DQN, self).__init__()
@@ -44,6 +40,56 @@ optimizer = None
 memory = deque(maxlen=MEMORY_SIZE)
 steps_done = 0
 epsilon = EPSILON_START
+
+def will_be_in_blast(position, game_state, time_step=0):
+    """
+    Determine if a given position will be in the blast radius at a specific time step.
+    
+    Args:
+        position (tuple): (x, y) coordinates of the position to check.
+        game_state (dict): Current game state.
+        time_step (int): The time step to consider for bomb explosions.
+    
+    Returns:
+        bool: True if the position is within any blast radius at the given time step, False otherwise.
+    """
+    x, y = position
+    field = game_state['field']
+    bombs = game_state['bombs']
+
+    for bomb_pos, countdown in bombs:
+        explosion_time = countdown  # Bomb will explode when countdown reaches 0
+        steps_until_explosion = explosion_time - time_step
+        if steps_until_explosion != 0:
+            continue  # Bomb does not explode at this time step
+
+        # Compute the blast zone considering walls
+        blast_positions = compute_blast_zone(bomb_pos, field)
+        if position in blast_positions:
+            return True
+    return False
+
+def compute_blast_zone(bomb_pos, field):
+    x_bomb, y_bomb = bomb_pos
+    blast_positions = [bomb_pos]
+    directions = [(-1,0), (1,0), (0,-1), (0,1)]
+    for dx, dy in directions:
+        for i in range(1, 4):  # Blast range is 3 tiles
+            x, y = x_bomb + i*dx, y_bomb + i*dy
+            if x < 0 or x >= field.shape[0] or y < 0 or y >= field.shape[1]:
+                break  # Out of bounds
+            if field[x, y] == -1:  # Stone wall blocks blast
+                break
+            blast_positions.append((x, y))
+            if field[x, y] == 1:  # Crate blocks blast beyond this point
+                break
+    return blast_positions
+
+
+
+# common.py
+
+# ... [imports and other definitions] ...
 
 def state_to_features(game_state: dict) -> np.ndarray:
     """
@@ -121,16 +167,28 @@ def state_to_features(game_state: dict) -> np.ndarray:
     # 9. Your current score
     features.append(score)
 
-    # 10. Add more features as needed to reach input_dim = 18
+    # 10. Is the agent currently in danger?
+    in_danger = int(will_be_in_blast((x, y), game_state, time_step=0))  # Providing default time_step=0
+    features.append(in_danger)
+
+    # 11. Time until the nearest bomb explodes
+    if bombs:
+        min_bomb_countdown = min([bomb[1] for bomb in bombs])
+    else:
+        min_bomb_countdown = 0
+    features.append(min_bomb_countdown)
+
+    # 12. Number of escape routes
+    num_safe_directions = sum(safe_directions)
+    features.append(num_safe_directions)
+
+    # Ensure feature vector has consistent length
     while len(features) < 18:
         features.append(0)
 
     return np.array(features, dtype=float)
 
 def get_new_position(position, action):
-    """
-    Get new position based on action.
-    """
     x, y = position
     if action == 'UP':
         return x, y - 1
@@ -140,5 +198,6 @@ def get_new_position(position, action):
         return x - 1, y
     elif action == 'RIGHT':
         return x + 1, y
-    else:
-        return x, y  # For 'WAIT' or 'BOMB'
+    return x, y
+
+
