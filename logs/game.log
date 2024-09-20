@@ -1,9 +1,383 @@
-2024-09-18 00:17:03,279 [BombeRLeWorld] INFO: Initializing game world
-2024-09-18 00:17:03,367 [BombeRLeWorld] INFO: STARTING ROUND #1
-2024-09-18 00:17:03,378 [BombeRLeWorld] INFO: STARTING STEP 1
-2024-09-18 00:17:03,391 [BombeRLeWorld] INFO: Agent <q_agent> chose action DOWN in 0.00s.
-2024-09-18 00:17:03,391 [BombeRLeWorld] INFO: Agent <q_agent> stayed within acceptable think time.
-2024-09-18 00:17:03,391 [BombeRLeWorld] INFO: Agent <rule_based_agent> chose action UP in 0.00s.
-2024-09-18 00:17:03,391 [BombeRLeWorld] INFO: Agent <rule_based_agent> stayed within acceptable think time.
-2024-09-18 00:17:03,391 [BombeRLeWorld] INFO: Agent <coin_collector_agent> chose action DOWN in 0.01s.
-2024-09-18 00:17:03,392 [BombeRLeWorld] INFO: Agent <coin_collector_agent> stayed within acceptable think time.
+2024-09-19 00:30:00,269 [BombeRLeWorld] INFO: Initializing game world
+2024-09-19 00:30:00,640 [BombeRLeWorld] INFO: STARTING ROUND #1
+2024-09-19 00:30:00,672 [BombeRLeWorld] INFO: STARTING STEP 1
+2024-09-19 00:30:00,673 [BombeRLeWorld] INFO: Agent <rule_based_agent> chose action UP in 0.00s.
+2024-09-19 00:30:00,673 [BombeRLeWorld] INFO: Agent <rule_based_agent> stayed within acceptable think time.
+2024-09-19 00:30:00,673 [BombeRLeWorld] INFO: Agent <coin_collector_agent> chose action DOWN in 0.00s.
+2024-09-19 00:30:00,673 [BombeRLeWorld] INFO: Agent <coin_collector_agent> stayed within acceptable think time.
+2024-09-19 00:30:00,673 [BombeRLeWorld] INFO: Agent <q_agent> chose action UP in 0.00s.
+2024-09-19 00:30:00,673 [BombeRLeWorld] INFO: Agent <q_agent> stayed within acceptable think time.
+2024-09-19 00:30:00,746 [BombeRLeWorld] INFO: STARTING STEP 2
+2024-09-19 00:30:00,747 [BombeRLeWorld] INFO: Agent <coin_collector_agent> chose action BOMB in 0.00s.
+2024-09-19 00:30:00,747 [BombeRLeWorld] INFO: Agent <coin_collector_agent> stayed within acceptable think time.
+2024-09-19 00:30:00,747 [BombeRLeWorld] INFO: Agent <coin_collector_agent> drops bomb at (1, 2)
+2024-09-19 00:30:00,747 [BombeRLeWorld] INFO: Agent <rule_based_agent> chose action BOMB in 0.00s.
+2024-09-19 00:30:00,747 [BombeRLeWorld] INFO: Agent <rule_based_agent> stayed within acceptable think time.
+2024-09-19 00:30:00,747 [BombeRLeWorld] INFO: Agent <rule_based_agent> drops bomb at (1, 14)
+2024-09-19 00:30:00,747 [BombeRLeWorld] INFO: Agent <q_agent> chose action RIGHT in 0.00s.
+2024-09-19 00:30:00,747 [BombeRLeWorld] INFO: Agent <q_agent> stayed within acceptable think time.
+2024-09-19 00:30:00,853 [BombeRLeWorld] INFO: STARTING STEP 3
+2024-09-19 00:30:00,855 [BombeRLeWorld] INFO: Agent <coin_collector_agent> chose action UP in 0.00s.
+2024-09-19 00:30:00,855 [BombeRLeWorld] INFO: Agent <coin_collector_agent> stayed within acceptable think time.
+2024-09-19 00:30:00,855 [BombeRLeWorld] INFO: Agent <rule_based_agent> chose action DOWN in 0.00s.
+2024-09-19 00:30:00,855 [BombeRLeWorld] INFO: Agent <rule_based_agent> stayed within acceptable think time.
+2024-09-19 00:30:00,855 [BombeRLeWorld] INFO: Agent <q_agent> chose action UP in 0.00s.
+2024-09-19 00:30:00,855 [BombeRLeWorld] INFO: Agent <q_agent> stayed within acceptable think time.
+2024-09-19 00:30:00,948 [BombeRLeWorld] INFO: STARTING STEP 4
+2024-09-19 00:30:00,949 [BombeRLeWorld] INFO: Agent <q_agent> chose action DOWN in 0.00s.
+2024-09-19 00:30:00,949 [BombeRLeWorld] INFO: Agent <q_agent> stayed within acceptable think time.
+2024-09-19 00:30:00,949 [BombeRLeWorld] INFO: Agent <coin_collector_agent> chose action RIGHT in 0.00s.
+2024-09-19 00:30:00,949 [BombeRLeWorld] INFO: Agent <coin_collector_agent> stayed within acceptable think time.
+2024-09-19 00:30:00,949 [BombeRLeWorld] INFO: Agent <rule_based_agent> chose action RIGHT in 0.00s.
+2024-09-19 00:30:00,949 [BombeRLeWorld] INFO: Agent <rule_based_agent> stayed within acceptable think time.
+2024-09-19 00:30:01,051 [BombeRLeWorld] INFO: STARTING STEP 5
+2024-09-19 00:30:01,052 [BombeRLeWorld] INFO: Agent <q_agent> chose action WAIT in 0.00s.
+2024-09-19 00:30:01,052 [BombeRLeWorld] INFO: Agent <q_agent> stayed within acceptable think time.
+2024-09-19 00:30:01,053 [BombeRLeWorld] INFO: Agent <rule_based_agent> chose action LEFT in 0.00s.
+2024-09-19 00:30:01,053 [BombeRLeWorld] INFO: Agent <rule_based_agent> stayed within acceptable think time.
+2024-09-19 00:30:01,053 [BombeRLeWorld] INFO: Agent <coin_collector_agent> chose action LEFT in 0.00s.
+2024-09-19 00:30:01,053 [BombeRLeWorld] INFO: Agent <coin_collector_agent> stayed within acceptable think time.
+2024-09-19 00:30:01,154 [BombeRLeWorld] INFO: STARTING STEP 6
+2024-09-19 00:30:01,157 [BombeRLeWorld] INFO: Agent <q_agent> chose action RIGHT in 0.00s.
+2024-09-19 00:30:01,157 [BombeRLeWorld] INFO: Agent <q_agent> stayed within acceptable think time.
+2024-09-19 00:30:01,157 [BombeRLeWorld] INFO: Agent <coin_collector_agent> chose action RIGHT in 0.00s.
+2024-09-19 00:30:01,157 [BombeRLeWorld] INFO: Agent <coin_collector_agent> stayed within acceptable think time.
+2024-09-19 00:30:01,157 [BombeRLeWorld] INFO: Agent <rule_based_agent> chose action RIGHT in 0.00s.
+2024-09-19 00:30:01,157 [BombeRLeWorld] INFO: Agent <rule_based_agent> stayed within acceptable think time.
+2024-09-19 00:30:01,157 [BombeRLeWorld] INFO: Agent <coin_collector_agent>'s bomb at (1, 2) explodes
+2024-09-19 00:30:01,157 [BombeRLeWorld] INFO: Agent <rule_based_agent>'s bomb at (1, 14) explodes
+2024-09-19 00:30:01,257 [BombeRLeWorld] INFO: STARTING STEP 7
+2024-09-19 00:30:01,258 [BombeRLeWorld] INFO: Agent <q_agent> chose action WAIT in 0.00s.
+2024-09-19 00:30:01,258 [BombeRLeWorld] INFO: Agent <q_agent> stayed within acceptable think time.
+2024-09-19 00:30:01,258 [BombeRLeWorld] INFO: Agent <coin_collector_agent> chose action None in 0.00s.
+2024-09-19 00:30:01,258 [BombeRLeWorld] INFO: Agent <coin_collector_agent> stayed within acceptable think time.
+2024-09-19 00:30:01,258 [BombeRLeWorld] INFO: Agent <rule_based_agent> chose action None in 0.00s.
+2024-09-19 00:30:01,258 [BombeRLeWorld] INFO: Agent <rule_based_agent> stayed within acceptable think time.
+2024-09-19 00:30:01,358 [BombeRLeWorld] INFO: STARTING STEP 8
+2024-09-19 00:30:01,360 [BombeRLeWorld] INFO: Agent <rule_based_agent> chose action LEFT in 0.00s.
+2024-09-19 00:30:01,361 [BombeRLeWorld] INFO: Agent <rule_based_agent> stayed within acceptable think time.
+2024-09-19 00:30:01,361 [BombeRLeWorld] INFO: Agent <coin_collector_agent> chose action LEFT in 0.00s.
+2024-09-19 00:30:01,361 [BombeRLeWorld] INFO: Agent <coin_collector_agent> stayed within acceptable think time.
+2024-09-19 00:30:01,361 [BombeRLeWorld] INFO: Agent <q_agent> chose action WAIT in 0.00s.
+2024-09-19 00:30:01,361 [BombeRLeWorld] INFO: Agent <q_agent> stayed within acceptable think time.
+2024-09-19 00:30:01,460 [BombeRLeWorld] INFO: STARTING STEP 9
+2024-09-19 00:30:01,461 [BombeRLeWorld] INFO: Agent <rule_based_agent> chose action RIGHT in 0.00s.
+2024-09-19 00:30:01,461 [BombeRLeWorld] INFO: Agent <rule_based_agent> stayed within acceptable think time.
+2024-09-19 00:30:01,461 [BombeRLeWorld] INFO: Agent <q_agent> chose action LEFT in 0.00s.
+2024-09-19 00:30:01,461 [BombeRLeWorld] INFO: Agent <q_agent> stayed within acceptable think time.
+2024-09-19 00:30:01,461 [BombeRLeWorld] INFO: Agent <coin_collector_agent> chose action RIGHT in 0.00s.
+2024-09-19 00:30:01,461 [BombeRLeWorld] INFO: Agent <coin_collector_agent> stayed within acceptable think time.
+2024-09-19 00:30:01,560 [BombeRLeWorld] INFO: STARTING STEP 10
+2024-09-19 00:30:01,563 [BombeRLeWorld] INFO: Agent <rule_based_agent> chose action BOMB in 0.00s.
+2024-09-19 00:30:01,563 [BombeRLeWorld] INFO: Agent <rule_based_agent> stayed within acceptable think time.
+2024-09-19 00:30:01,563 [BombeRLeWorld] INFO: Agent <rule_based_agent> drops bomb at (2, 15)
+2024-09-19 00:30:01,563 [BombeRLeWorld] INFO: Agent <q_agent> chose action UP in 0.00s.
+2024-09-19 00:30:01,563 [BombeRLeWorld] INFO: Agent <q_agent> stayed within acceptable think time.
+2024-09-19 00:30:01,563 [BombeRLeWorld] INFO: Agent <coin_collector_agent> chose action BOMB in 0.00s.
+2024-09-19 00:30:01,564 [BombeRLeWorld] INFO: Agent <coin_collector_agent> stayed within acceptable think time.
+2024-09-19 00:30:01,564 [BombeRLeWorld] INFO: Agent <coin_collector_agent> drops bomb at (2, 1)
+2024-09-19 00:30:01,662 [BombeRLeWorld] INFO: STARTING STEP 11
+2024-09-19 00:30:01,666 [BombeRLeWorld] INFO: Agent <coin_collector_agent> chose action LEFT in 0.00s.
+2024-09-19 00:30:01,666 [BombeRLeWorld] INFO: Agent <coin_collector_agent> stayed within acceptable think time.
+2024-09-19 00:30:01,666 [BombeRLeWorld] INFO: Agent <rule_based_agent> chose action LEFT in 0.00s.
+2024-09-19 00:30:01,666 [BombeRLeWorld] INFO: Agent <rule_based_agent> stayed within acceptable think time.
+2024-09-19 00:30:01,666 [BombeRLeWorld] INFO: Agent <q_agent> chose action DOWN in 0.00s.
+2024-09-19 00:30:01,666 [BombeRLeWorld] INFO: Agent <q_agent> stayed within acceptable think time.
+2024-09-19 00:30:01,760 [BombeRLeWorld] INFO: STARTING STEP 12
+2024-09-19 00:30:01,762 [BombeRLeWorld] INFO: Agent <coin_collector_agent> chose action DOWN in 0.00s.
+2024-09-19 00:30:01,762 [BombeRLeWorld] INFO: Agent <coin_collector_agent> stayed within acceptable think time.
+2024-09-19 00:30:01,762 [BombeRLeWorld] INFO: Agent <q_agent> chose action RIGHT in 0.00s.
+2024-09-19 00:30:01,762 [BombeRLeWorld] INFO: Agent <q_agent> stayed within acceptable think time.
+2024-09-19 00:30:01,762 [BombeRLeWorld] INFO: Agent <rule_based_agent> chose action UP in 0.00s.
+2024-09-19 00:30:01,762 [BombeRLeWorld] INFO: Agent <rule_based_agent> stayed within acceptable think time.
+2024-09-19 00:30:01,862 [BombeRLeWorld] INFO: STARTING STEP 13
+2024-09-19 00:30:01,864 [BombeRLeWorld] INFO: Agent <rule_based_agent> chose action UP in 0.00s.
+2024-09-19 00:30:01,864 [BombeRLeWorld] INFO: Agent <rule_based_agent> stayed within acceptable think time.
+2024-09-19 00:30:01,864 [BombeRLeWorld] INFO: Agent <coin_collector_agent> chose action DOWN in 0.00s.
+2024-09-19 00:30:01,864 [BombeRLeWorld] INFO: Agent <coin_collector_agent> stayed within acceptable think time.
+2024-09-19 00:30:01,864 [BombeRLeWorld] INFO: Agent <q_agent> chose action RIGHT in 0.00s.
+2024-09-19 00:30:01,864 [BombeRLeWorld] INFO: Agent <q_agent> stayed within acceptable think time.
+2024-09-19 00:30:01,965 [BombeRLeWorld] INFO: STARTING STEP 14
+2024-09-19 00:30:01,968 [BombeRLeWorld] INFO: Agent <coin_collector_agent> chose action DOWN in 0.00s.
+2024-09-19 00:30:01,969 [BombeRLeWorld] INFO: Agent <coin_collector_agent> stayed within acceptable think time.
+2024-09-19 00:30:01,969 [BombeRLeWorld] INFO: Agent <q_agent> chose action UP in 0.00s.
+2024-09-19 00:30:01,969 [BombeRLeWorld] INFO: Agent <q_agent> stayed within acceptable think time.
+2024-09-19 00:30:01,969 [BombeRLeWorld] INFO: Agent <rule_based_agent> chose action UP in 0.00s.
+2024-09-19 00:30:01,969 [BombeRLeWorld] INFO: Agent <rule_based_agent> stayed within acceptable think time.
+2024-09-19 00:30:01,969 [BombeRLeWorld] INFO: Agent <rule_based_agent>'s bomb at (2, 15) explodes
+2024-09-19 00:30:01,969 [BombeRLeWorld] INFO: Coin found at (4, 15)
+2024-09-19 00:30:01,969 [BombeRLeWorld] INFO: Agent <coin_collector_agent>'s bomb at (2, 1) explodes
+2024-09-19 00:30:02,069 [BombeRLeWorld] INFO: STARTING STEP 15
+2024-09-19 00:30:02,073 [BombeRLeWorld] INFO: Agent <coin_collector_agent> chose action DOWN in 0.00s.
+2024-09-19 00:30:02,073 [BombeRLeWorld] INFO: Agent <coin_collector_agent> stayed within acceptable think time.
+2024-09-19 00:30:02,073 [BombeRLeWorld] INFO: Agent <rule_based_agent> chose action UP in 0.00s.
+2024-09-19 00:30:02,073 [BombeRLeWorld] INFO: Agent <rule_based_agent> stayed within acceptable think time.
+2024-09-19 00:30:02,074 [BombeRLeWorld] INFO: Agent <q_agent> chose action RIGHT in 0.00s.
+2024-09-19 00:30:02,074 [BombeRLeWorld] INFO: Agent <q_agent> stayed within acceptable think time.
+2024-09-19 00:30:02,164 [BombeRLeWorld] INFO: STARTING STEP 16
+2024-09-19 00:30:02,166 [BombeRLeWorld] INFO: Agent <coin_collector_agent> chose action RIGHT in 0.00s.
+2024-09-19 00:30:02,166 [BombeRLeWorld] INFO: Agent <coin_collector_agent> stayed within acceptable think time.
+2024-09-19 00:30:02,166 [BombeRLeWorld] INFO: Agent <q_agent> chose action DOWN in 0.00s.
+2024-09-19 00:30:02,166 [BombeRLeWorld] INFO: Agent <q_agent> stayed within acceptable think time.
+2024-09-19 00:30:02,166 [BombeRLeWorld] INFO: Agent <rule_based_agent> chose action UP in 0.00s.
+2024-09-19 00:30:02,166 [BombeRLeWorld] INFO: Agent <rule_based_agent> stayed within acceptable think time.
+2024-09-19 00:30:02,266 [BombeRLeWorld] INFO: STARTING STEP 17
+2024-09-19 00:30:02,267 [BombeRLeWorld] INFO: Agent <coin_collector_agent> chose action BOMB in 0.00s.
+2024-09-19 00:30:02,267 [BombeRLeWorld] INFO: Agent <coin_collector_agent> stayed within acceptable think time.
+2024-09-19 00:30:02,267 [BombeRLeWorld] INFO: Agent <coin_collector_agent> drops bomb at (2, 5)
+2024-09-19 00:30:02,267 [BombeRLeWorld] INFO: Agent <q_agent> chose action WAIT in 0.00s.
+2024-09-19 00:30:02,267 [BombeRLeWorld] INFO: Agent <q_agent> stayed within acceptable think time.
+2024-09-19 00:30:02,268 [BombeRLeWorld] INFO: Agent <rule_based_agent> chose action BOMB in 0.00s.
+2024-09-19 00:30:02,268 [BombeRLeWorld] INFO: Agent <rule_based_agent> stayed within acceptable think time.
+2024-09-19 00:30:02,268 [BombeRLeWorld] INFO: Agent <rule_based_agent> drops bomb at (1, 10)
+2024-09-19 00:30:02,367 [BombeRLeWorld] INFO: STARTING STEP 18
+2024-09-19 00:30:02,369 [BombeRLeWorld] INFO: Agent <coin_collector_agent> chose action LEFT in 0.00s.
+2024-09-19 00:30:02,369 [BombeRLeWorld] INFO: Agent <coin_collector_agent> stayed within acceptable think time.
+2024-09-19 00:30:02,369 [BombeRLeWorld] INFO: Agent <q_agent> chose action WAIT in 0.00s.
+2024-09-19 00:30:02,369 [BombeRLeWorld] INFO: Agent <q_agent> stayed within acceptable think time.
+2024-09-19 00:30:02,369 [BombeRLeWorld] INFO: Agent <rule_based_agent> chose action DOWN in 0.00s.
+2024-09-19 00:30:02,369 [BombeRLeWorld] INFO: Agent <rule_based_agent> stayed within acceptable think time.
+2024-09-19 00:30:02,469 [BombeRLeWorld] INFO: STARTING STEP 19
+2024-09-19 00:30:02,473 [BombeRLeWorld] INFO: Agent <rule_based_agent> chose action DOWN in 0.00s.
+2024-09-19 00:30:02,473 [BombeRLeWorld] INFO: Agent <rule_based_agent> stayed within acceptable think time.
+2024-09-19 00:30:02,473 [BombeRLeWorld] INFO: Agent <q_agent> chose action DOWN in 0.00s.
+2024-09-19 00:30:02,473 [BombeRLeWorld] INFO: Agent <q_agent> stayed within acceptable think time.
+2024-09-19 00:30:02,473 [BombeRLeWorld] INFO: Agent <coin_collector_agent> chose action DOWN in 0.00s.
+2024-09-19 00:30:02,473 [BombeRLeWorld] INFO: Agent <coin_collector_agent> stayed within acceptable think time.
+2024-09-19 00:30:02,569 [BombeRLeWorld] INFO: STARTING STEP 20
+2024-09-19 00:30:02,570 [BombeRLeWorld] INFO: Agent <q_agent> chose action LEFT in 0.00s.
+2024-09-19 00:30:02,570 [BombeRLeWorld] INFO: Agent <q_agent> stayed within acceptable think time.
+2024-09-19 00:30:02,570 [BombeRLeWorld] INFO: Agent <rule_based_agent> chose action DOWN in 0.00s.
+2024-09-19 00:30:02,570 [BombeRLeWorld] INFO: Agent <rule_based_agent> stayed within acceptable think time.
+2024-09-19 00:30:02,570 [BombeRLeWorld] INFO: Agent <coin_collector_agent> chose action UP in 0.00s.
+2024-09-19 00:30:02,570 [BombeRLeWorld] INFO: Agent <coin_collector_agent> stayed within acceptable think time.
+2024-09-19 00:30:02,670 [BombeRLeWorld] INFO: STARTING STEP 21
+2024-09-19 00:30:02,671 [BombeRLeWorld] INFO: Agent <coin_collector_agent> chose action DOWN in 0.00s.
+2024-09-19 00:30:02,671 [BombeRLeWorld] INFO: Agent <coin_collector_agent> stayed within acceptable think time.
+2024-09-19 00:30:02,671 [BombeRLeWorld] INFO: Agent <q_agent> chose action UP in 0.00s.
+2024-09-19 00:30:02,671 [BombeRLeWorld] INFO: Agent <q_agent> stayed within acceptable think time.
+2024-09-19 00:30:02,671 [BombeRLeWorld] INFO: Agent <rule_based_agent> chose action DOWN in 0.00s.
+2024-09-19 00:30:02,671 [BombeRLeWorld] INFO: Agent <rule_based_agent> stayed within acceptable think time.
+2024-09-19 00:30:02,672 [BombeRLeWorld] INFO: Agent <coin_collector_agent>'s bomb at (2, 5) explodes
+2024-09-19 00:30:02,672 [BombeRLeWorld] INFO: Agent <rule_based_agent>'s bomb at (1, 10) explodes
+2024-09-19 00:30:02,771 [BombeRLeWorld] INFO: STARTING STEP 22
+2024-09-19 00:30:02,773 [BombeRLeWorld] INFO: Agent <rule_based_agent> chose action DOWN in 0.00s.
+2024-09-19 00:30:02,773 [BombeRLeWorld] INFO: Agent <rule_based_agent> stayed within acceptable think time.
+2024-09-19 00:30:02,773 [BombeRLeWorld] INFO: Agent <coin_collector_agent> chose action None in 0.00s.
+2024-09-19 00:30:02,773 [BombeRLeWorld] INFO: Agent <coin_collector_agent> stayed within acceptable think time.
+2024-09-19 00:30:02,773 [BombeRLeWorld] INFO: Agent <q_agent> chose action BOMB in 0.00s.
+2024-09-19 00:30:02,773 [BombeRLeWorld] INFO: Agent <q_agent> stayed within acceptable think time.
+2024-09-19 00:30:02,773 [BombeRLeWorld] INFO: Agent <q_agent> drops bomb at (15, 2)
+2024-09-19 00:30:02,873 [BombeRLeWorld] INFO: STARTING STEP 23
+2024-09-19 00:30:02,878 [BombeRLeWorld] INFO: Agent <coin_collector_agent> chose action DOWN in 0.00s.
+2024-09-19 00:30:02,878 [BombeRLeWorld] INFO: Agent <coin_collector_agent> stayed within acceptable think time.
+2024-09-19 00:30:02,878 [BombeRLeWorld] INFO: Agent <rule_based_agent> chose action RIGHT in 0.00s.
+2024-09-19 00:30:02,878 [BombeRLeWorld] INFO: Agent <rule_based_agent> stayed within acceptable think time.
+2024-09-19 00:30:02,878 [BombeRLeWorld] INFO: Agent <q_agent> chose action RIGHT in 0.00s.
+2024-09-19 00:30:02,878 [BombeRLeWorld] INFO: Agent <q_agent> stayed within acceptable think time.
+2024-09-19 00:30:02,976 [BombeRLeWorld] INFO: STARTING STEP 24
+2024-09-19 00:30:02,979 [BombeRLeWorld] INFO: Agent <rule_based_agent> chose action RIGHT in 0.00s.
+2024-09-19 00:30:02,979 [BombeRLeWorld] INFO: Agent <rule_based_agent> stayed within acceptable think time.
+2024-09-19 00:30:02,979 [BombeRLeWorld] INFO: Agent <coin_collector_agent> chose action RIGHT in 0.00s.
+2024-09-19 00:30:02,979 [BombeRLeWorld] INFO: Agent <coin_collector_agent> stayed within acceptable think time.
+2024-09-19 00:30:02,980 [BombeRLeWorld] INFO: Agent <q_agent> chose action WAIT in 0.00s.
+2024-09-19 00:30:02,980 [BombeRLeWorld] INFO: Agent <q_agent> stayed within acceptable think time.
+2024-09-19 00:30:03,075 [BombeRLeWorld] INFO: STARTING STEP 25
+2024-09-19 00:30:03,078 [BombeRLeWorld] INFO: Agent <rule_based_agent> chose action RIGHT in 0.00s.
+2024-09-19 00:30:03,078 [BombeRLeWorld] INFO: Agent <rule_based_agent> stayed within acceptable think time.
+2024-09-19 00:30:03,078 [BombeRLeWorld] INFO: Agent <coin_collector_agent> chose action BOMB in 0.00s.
+2024-09-19 00:30:03,078 [BombeRLeWorld] INFO: Agent <coin_collector_agent> stayed within acceptable think time.
+2024-09-19 00:30:03,078 [BombeRLeWorld] INFO: Agent <coin_collector_agent> drops bomb at (2, 7)
+2024-09-19 00:30:03,079 [BombeRLeWorld] INFO: Agent <q_agent> chose action DOWN in 0.00s.
+2024-09-19 00:30:03,079 [BombeRLeWorld] INFO: Agent <q_agent> stayed within acceptable think time.
+2024-09-19 00:30:03,079 [BombeRLeWorld] INFO: Agent <rule_based_agent> picked up coin at (4, 15) and receives 1 point
+2024-09-19 00:30:03,176 [BombeRLeWorld] INFO: STARTING STEP 26
+2024-09-19 00:30:03,178 [BombeRLeWorld] INFO: Agent <q_agent> chose action DOWN in 0.00s.
+2024-09-19 00:30:03,178 [BombeRLeWorld] INFO: Agent <q_agent> stayed within acceptable think time.
+2024-09-19 00:30:03,178 [BombeRLeWorld] INFO: Agent <coin_collector_agent> chose action LEFT in 0.00s.
+2024-09-19 00:30:03,178 [BombeRLeWorld] INFO: Agent <coin_collector_agent> stayed within acceptable think time.
+2024-09-19 00:30:03,178 [BombeRLeWorld] INFO: Agent <rule_based_agent> chose action RIGHT in 0.00s.
+2024-09-19 00:30:03,178 [BombeRLeWorld] INFO: Agent <rule_based_agent> stayed within acceptable think time.
+2024-09-19 00:30:03,178 [BombeRLeWorld] INFO: Agent <q_agent>'s bomb at (15, 2) explodes
+2024-09-19 00:30:03,178 [BombeRLeWorld] INFO: Coin found at (15, 4)
+2024-09-19 00:30:03,178 [BombeRLeWorld] INFO: Agent <q_agent> blown up by own bomb
+2024-09-19 00:30:03,277 [BombeRLeWorld] INFO: STARTING STEP 27
+2024-09-19 00:30:03,281 [BombeRLeWorld] INFO: Agent <rule_based_agent> chose action RIGHT in 0.00s.
+2024-09-19 00:30:03,281 [BombeRLeWorld] INFO: Agent <rule_based_agent> stayed within acceptable think time.
+2024-09-19 00:30:03,281 [BombeRLeWorld] INFO: Agent <coin_collector_agent> chose action DOWN in 0.00s.
+2024-09-19 00:30:03,281 [BombeRLeWorld] INFO: Agent <coin_collector_agent> stayed within acceptable think time.
+2024-09-19 00:30:03,378 [BombeRLeWorld] INFO: STARTING STEP 28
+2024-09-19 00:30:03,382 [BombeRLeWorld] INFO: Agent <rule_based_agent> chose action BOMB in 0.00s.
+2024-09-19 00:30:03,382 [BombeRLeWorld] INFO: Agent <rule_based_agent> stayed within acceptable think time.
+2024-09-19 00:30:03,382 [BombeRLeWorld] INFO: Agent <rule_based_agent> drops bomb at (6, 15)
+2024-09-19 00:30:03,382 [BombeRLeWorld] INFO: Agent <coin_collector_agent> chose action UP in 0.00s.
+2024-09-19 00:30:03,382 [BombeRLeWorld] INFO: Agent <coin_collector_agent> stayed within acceptable think time.
+2024-09-19 00:30:03,479 [BombeRLeWorld] INFO: STARTING STEP 29
+2024-09-19 00:30:03,483 [BombeRLeWorld] INFO: Agent <rule_based_agent> chose action LEFT in 0.00s.
+2024-09-19 00:30:03,483 [BombeRLeWorld] INFO: Agent <rule_based_agent> stayed within acceptable think time.
+2024-09-19 00:30:03,483 [BombeRLeWorld] INFO: Agent <coin_collector_agent> chose action DOWN in 0.00s.
+2024-09-19 00:30:03,483 [BombeRLeWorld] INFO: Agent <coin_collector_agent> stayed within acceptable think time.
+2024-09-19 00:30:03,483 [BombeRLeWorld] INFO: Agent <coin_collector_agent>'s bomb at (2, 7) explodes
+2024-09-19 00:30:03,580 [BombeRLeWorld] INFO: STARTING STEP 30
+2024-09-19 00:30:03,584 [BombeRLeWorld] INFO: Agent <rule_based_agent> chose action LEFT in 0.00s.
+2024-09-19 00:30:03,584 [BombeRLeWorld] INFO: Agent <rule_based_agent> stayed within acceptable think time.
+2024-09-19 00:30:03,584 [BombeRLeWorld] INFO: Agent <coin_collector_agent> chose action DOWN in 0.00s.
+2024-09-19 00:30:03,584 [BombeRLeWorld] INFO: Agent <coin_collector_agent> stayed within acceptable think time.
+2024-09-19 00:30:03,680 [BombeRLeWorld] INFO: STARTING STEP 31
+2024-09-19 00:30:03,683 [BombeRLeWorld] INFO: Agent <coin_collector_agent> chose action UP in 0.00s.
+2024-09-19 00:30:03,683 [BombeRLeWorld] INFO: Agent <coin_collector_agent> stayed within acceptable think time.
+2024-09-19 00:30:03,683 [BombeRLeWorld] INFO: Agent <rule_based_agent> chose action LEFT in 0.00s.
+2024-09-19 00:30:03,683 [BombeRLeWorld] INFO: Agent <rule_based_agent> stayed within acceptable think time.
+2024-09-19 00:30:03,776 [BombeRLeWorld] INFO: STARTING STEP 32
+2024-09-19 00:30:03,777 [BombeRLeWorld] INFO: Agent <coin_collector_agent> chose action UP in 0.00s.
+2024-09-19 00:30:03,777 [BombeRLeWorld] INFO: Agent <coin_collector_agent> stayed within acceptable think time.
+2024-09-19 00:30:03,777 [BombeRLeWorld] INFO: Agent <rule_based_agent> chose action UP in 0.00s.
+2024-09-19 00:30:03,777 [BombeRLeWorld] INFO: Agent <rule_based_agent> stayed within acceptable think time.
+2024-09-19 00:30:03,777 [BombeRLeWorld] INFO: Agent <rule_based_agent>'s bomb at (6, 15) explodes
+2024-09-19 00:30:03,880 [BombeRLeWorld] INFO: STARTING STEP 33
+2024-09-19 00:30:03,883 [BombeRLeWorld] INFO: Agent <coin_collector_agent> chose action RIGHT in 0.00s.
+2024-09-19 00:30:03,883 [BombeRLeWorld] INFO: Agent <coin_collector_agent> stayed within acceptable think time.
+2024-09-19 00:30:03,883 [BombeRLeWorld] INFO: Agent <rule_based_agent> chose action None in 0.00s.
+2024-09-19 00:30:03,883 [BombeRLeWorld] INFO: Agent <rule_based_agent> stayed within acceptable think time.
+2024-09-19 00:30:03,983 [BombeRLeWorld] INFO: STARTING STEP 34
+2024-09-19 00:30:03,984 [BombeRLeWorld] INFO: Agent <coin_collector_agent> chose action RIGHT in 0.00s.
+2024-09-19 00:30:03,984 [BombeRLeWorld] INFO: Agent <coin_collector_agent> stayed within acceptable think time.
+2024-09-19 00:30:03,984 [BombeRLeWorld] INFO: Agent <rule_based_agent> chose action DOWN in 0.00s.
+2024-09-19 00:30:03,984 [BombeRLeWorld] INFO: Agent <rule_based_agent> stayed within acceptable think time.
+2024-09-19 00:30:04,084 [BombeRLeWorld] INFO: STARTING STEP 35
+2024-09-19 00:30:04,085 [BombeRLeWorld] INFO: Agent <rule_based_agent> chose action UP in 0.00s.
+2024-09-19 00:30:04,085 [BombeRLeWorld] INFO: Agent <rule_based_agent> stayed within acceptable think time.
+2024-09-19 00:30:04,085 [BombeRLeWorld] INFO: Agent <coin_collector_agent> chose action RIGHT in 0.00s.
+2024-09-19 00:30:04,085 [BombeRLeWorld] INFO: Agent <coin_collector_agent> stayed within acceptable think time.
+2024-09-19 00:30:04,188 [BombeRLeWorld] INFO: STARTING STEP 36
+2024-09-19 00:30:04,189 [BombeRLeWorld] INFO: Agent <coin_collector_agent> chose action RIGHT in 0.00s.
+2024-09-19 00:30:04,189 [BombeRLeWorld] INFO: Agent <coin_collector_agent> stayed within acceptable think time.
+2024-09-19 00:30:04,189 [BombeRLeWorld] INFO: Agent <rule_based_agent> chose action BOMB in 0.00s.
+2024-09-19 00:30:04,189 [BombeRLeWorld] INFO: Agent <rule_based_agent> stayed within acceptable think time.
+2024-09-19 00:30:04,189 [BombeRLeWorld] INFO: Agent <rule_based_agent> drops bomb at (3, 14)
+2024-09-19 00:30:04,288 [BombeRLeWorld] INFO: STARTING STEP 37
+2024-09-19 00:30:04,292 [BombeRLeWorld] INFO: Agent <coin_collector_agent> chose action RIGHT in 0.00s.
+2024-09-19 00:30:04,292 [BombeRLeWorld] INFO: Agent <coin_collector_agent> stayed within acceptable think time.
+2024-09-19 00:30:04,292 [BombeRLeWorld] INFO: Agent <rule_based_agent> chose action DOWN in 0.00s.
+2024-09-19 00:30:04,292 [BombeRLeWorld] INFO: Agent <rule_based_agent> stayed within acceptable think time.
+2024-09-19 00:30:04,388 [BombeRLeWorld] INFO: STARTING STEP 38
+2024-09-19 00:30:04,391 [BombeRLeWorld] INFO: Agent <rule_based_agent> chose action RIGHT in 0.00s.
+2024-09-19 00:30:04,391 [BombeRLeWorld] INFO: Agent <rule_based_agent> stayed within acceptable think time.
+2024-09-19 00:30:04,391 [BombeRLeWorld] INFO: Agent <coin_collector_agent> chose action BOMB in 0.00s.
+2024-09-19 00:30:04,391 [BombeRLeWorld] INFO: Agent <coin_collector_agent> stayed within acceptable think time.
+2024-09-19 00:30:04,391 [BombeRLeWorld] INFO: Agent <coin_collector_agent> drops bomb at (6, 7)
+2024-09-19 00:30:04,491 [BombeRLeWorld] INFO: STARTING STEP 39
+2024-09-19 00:30:04,493 [BombeRLeWorld] INFO: Agent <coin_collector_agent> chose action LEFT in 0.00s.
+2024-09-19 00:30:04,493 [BombeRLeWorld] INFO: Agent <coin_collector_agent> stayed within acceptable think time.
+2024-09-19 00:30:04,493 [BombeRLeWorld] INFO: Agent <rule_based_agent> chose action RIGHT in 0.00s.
+2024-09-19 00:30:04,493 [BombeRLeWorld] INFO: Agent <rule_based_agent> stayed within acceptable think time.
+2024-09-19 00:30:04,590 [BombeRLeWorld] INFO: STARTING STEP 40
+2024-09-19 00:30:04,594 [BombeRLeWorld] INFO: Agent <rule_based_agent> chose action RIGHT in 0.00s.
+2024-09-19 00:30:04,594 [BombeRLeWorld] INFO: Agent <rule_based_agent> stayed within acceptable think time.
+2024-09-19 00:30:04,594 [BombeRLeWorld] INFO: Agent <coin_collector_agent> chose action UP in 0.00s.
+2024-09-19 00:30:04,594 [BombeRLeWorld] INFO: Agent <coin_collector_agent> stayed within acceptable think time.
+2024-09-19 00:30:04,594 [BombeRLeWorld] INFO: Agent <rule_based_agent>'s bomb at (3, 14) explodes
+2024-09-19 00:30:04,691 [BombeRLeWorld] INFO: STARTING STEP 41
+2024-09-19 00:30:04,693 [BombeRLeWorld] INFO: Agent <rule_based_agent> chose action RIGHT in 0.00s.
+2024-09-19 00:30:04,693 [BombeRLeWorld] INFO: Agent <rule_based_agent> stayed within acceptable think time.
+2024-09-19 00:30:04,693 [BombeRLeWorld] INFO: Agent <coin_collector_agent> chose action UP in 0.00s.
+2024-09-19 00:30:04,693 [BombeRLeWorld] INFO: Agent <coin_collector_agent> stayed within acceptable think time.
+2024-09-19 00:30:04,793 [BombeRLeWorld] INFO: STARTING STEP 42
+2024-09-19 00:30:04,796 [BombeRLeWorld] INFO: Agent <rule_based_agent> chose action RIGHT in 0.00s.
+2024-09-19 00:30:04,796 [BombeRLeWorld] INFO: Agent <rule_based_agent> stayed within acceptable think time.
+2024-09-19 00:30:04,796 [BombeRLeWorld] INFO: Agent <coin_collector_agent> chose action UP in 0.00s.
+2024-09-19 00:30:04,796 [BombeRLeWorld] INFO: Agent <coin_collector_agent> stayed within acceptable think time.
+2024-09-19 00:30:04,796 [BombeRLeWorld] INFO: Agent <coin_collector_agent>'s bomb at (6, 7) explodes
+2024-09-19 00:30:04,894 [BombeRLeWorld] INFO: STARTING STEP 43
+2024-09-19 00:30:04,895 [BombeRLeWorld] INFO: Agent <rule_based_agent> chose action RIGHT in 0.00s.
+2024-09-19 00:30:04,895 [BombeRLeWorld] INFO: Agent <rule_based_agent> stayed within acceptable think time.
+2024-09-19 00:30:04,895 [BombeRLeWorld] INFO: Agent <coin_collector_agent> chose action UP in 0.00s.
+2024-09-19 00:30:04,895 [BombeRLeWorld] INFO: Agent <coin_collector_agent> stayed within acceptable think time.
+2024-09-19 00:30:04,994 [BombeRLeWorld] INFO: STARTING STEP 44
+2024-09-19 00:30:04,997 [BombeRLeWorld] INFO: Agent <coin_collector_agent> chose action DOWN in 0.00s.
+2024-09-19 00:30:04,997 [BombeRLeWorld] INFO: Agent <coin_collector_agent> stayed within acceptable think time.
+2024-09-19 00:30:04,997 [BombeRLeWorld] INFO: Agent <rule_based_agent> chose action BOMB in 0.00s.
+2024-09-19 00:30:04,997 [BombeRLeWorld] INFO: Agent <rule_based_agent> stayed within acceptable think time.
+2024-09-19 00:30:04,997 [BombeRLeWorld] INFO: Agent <rule_based_agent> drops bomb at (9, 15)
+2024-09-19 00:30:05,108 [BombeRLeWorld] INFO: STARTING STEP 45
+2024-09-19 00:30:05,110 [BombeRLeWorld] INFO: Agent <rule_based_agent> chose action LEFT in 0.00s.
+2024-09-19 00:30:05,110 [BombeRLeWorld] INFO: Agent <rule_based_agent> stayed within acceptable think time.
+2024-09-19 00:30:05,110 [BombeRLeWorld] INFO: Agent <coin_collector_agent> chose action UP in 0.00s.
+2024-09-19 00:30:05,110 [BombeRLeWorld] INFO: Agent <coin_collector_agent> stayed within acceptable think time.
+2024-09-19 00:30:05,198 [BombeRLeWorld] INFO: STARTING STEP 46
+2024-09-19 00:30:05,201 [BombeRLeWorld] INFO: Agent <coin_collector_agent> chose action BOMB in 0.00s.
+2024-09-19 00:30:05,201 [BombeRLeWorld] INFO: Agent <coin_collector_agent> stayed within acceptable think time.
+2024-09-19 00:30:05,202 [BombeRLeWorld] INFO: Agent <coin_collector_agent> drops bomb at (5, 3)
+2024-09-19 00:30:05,202 [BombeRLeWorld] INFO: Agent <rule_based_agent> chose action LEFT in 0.00s.
+2024-09-19 00:30:05,202 [BombeRLeWorld] INFO: Agent <rule_based_agent> stayed within acceptable think time.
+2024-09-19 00:30:05,299 [BombeRLeWorld] INFO: STARTING STEP 47
+2024-09-19 00:30:05,301 [BombeRLeWorld] INFO: Agent <coin_collector_agent> chose action DOWN in 0.00s.
+2024-09-19 00:30:05,301 [BombeRLeWorld] INFO: Agent <coin_collector_agent> stayed within acceptable think time.
+2024-09-19 00:30:05,302 [BombeRLeWorld] INFO: Agent <rule_based_agent> chose action LEFT in 0.00s.
+2024-09-19 00:30:05,302 [BombeRLeWorld] INFO: Agent <rule_based_agent> stayed within acceptable think time.
+2024-09-19 00:30:05,401 [BombeRLeWorld] INFO: STARTING STEP 48
+2024-09-19 00:30:05,405 [BombeRLeWorld] INFO: Agent <coin_collector_agent> chose action DOWN in 0.00s.
+2024-09-19 00:30:05,405 [BombeRLeWorld] INFO: Agent <coin_collector_agent> stayed within acceptable think time.
+2024-09-19 00:30:05,405 [BombeRLeWorld] INFO: Agent <rule_based_agent> chose action LEFT in 0.00s.
+2024-09-19 00:30:05,405 [BombeRLeWorld] INFO: Agent <rule_based_agent> stayed within acceptable think time.
+2024-09-19 00:30:05,405 [BombeRLeWorld] INFO: Agent <rule_based_agent>'s bomb at (9, 15) explodes
+2024-09-19 00:30:05,503 [BombeRLeWorld] INFO: STARTING STEP 49
+2024-09-19 00:30:05,506 [BombeRLeWorld] INFO: Agent <coin_collector_agent> chose action LEFT in 0.00s.
+2024-09-19 00:30:05,506 [BombeRLeWorld] INFO: Agent <coin_collector_agent> stayed within acceptable think time.
+2024-09-19 00:30:05,506 [BombeRLeWorld] INFO: Agent <rule_based_agent> chose action LEFT in 0.00s.
+2024-09-19 00:30:05,506 [BombeRLeWorld] INFO: Agent <rule_based_agent> stayed within acceptable think time.
+2024-09-19 00:30:05,602 [BombeRLeWorld] INFO: STARTING STEP 50
+2024-09-19 00:30:05,606 [BombeRLeWorld] INFO: Agent <coin_collector_agent> chose action LEFT in 0.00s.
+2024-09-19 00:30:05,606 [BombeRLeWorld] INFO: Agent <coin_collector_agent> stayed within acceptable think time.
+2024-09-19 00:30:05,606 [BombeRLeWorld] INFO: Agent <rule_based_agent> chose action LEFT in 0.00s.
+2024-09-19 00:30:05,606 [BombeRLeWorld] INFO: Agent <rule_based_agent> stayed within acceptable think time.
+2024-09-19 00:30:05,606 [BombeRLeWorld] INFO: Agent <coin_collector_agent>'s bomb at (5, 3) explodes
+2024-09-19 00:30:05,704 [BombeRLeWorld] INFO: STARTING STEP 51
+2024-09-19 00:30:05,709 [BombeRLeWorld] INFO: Agent <coin_collector_agent> chose action RIGHT in 0.00s.
+2024-09-19 00:30:05,709 [BombeRLeWorld] INFO: Agent <coin_collector_agent> stayed within acceptable think time.
+2024-09-19 00:30:05,709 [BombeRLeWorld] INFO: Agent <rule_based_agent> chose action UP in 0.00s.
+2024-09-19 00:30:05,709 [BombeRLeWorld] INFO: Agent <rule_based_agent> stayed within acceptable think time.
+2024-09-19 00:30:05,802 [BombeRLeWorld] INFO: STARTING STEP 52
+2024-09-19 00:30:05,804 [BombeRLeWorld] INFO: Agent <rule_based_agent> chose action UP in 0.00s.
+2024-09-19 00:30:05,804 [BombeRLeWorld] INFO: Agent <rule_based_agent> stayed within acceptable think time.
+2024-09-19 00:30:05,804 [BombeRLeWorld] INFO: Agent <coin_collector_agent> chose action RIGHT in 0.00s.
+2024-09-19 00:30:05,804 [BombeRLeWorld] INFO: Agent <coin_collector_agent> stayed within acceptable think time.
+2024-09-19 00:30:05,902 [BombeRLeWorld] INFO: STARTING STEP 53
+2024-09-19 00:30:05,904 [BombeRLeWorld] INFO: Agent <rule_based_agent> chose action UP in 0.00s.
+2024-09-19 00:30:05,904 [BombeRLeWorld] INFO: Agent <rule_based_agent> stayed within acceptable think time.
+2024-09-19 00:30:05,904 [BombeRLeWorld] INFO: Agent <coin_collector_agent> chose action UP in 0.00s.
+2024-09-19 00:30:05,904 [BombeRLeWorld] INFO: Agent <coin_collector_agent> stayed within acceptable think time.
+2024-09-19 00:30:06,004 [BombeRLeWorld] INFO: STARTING STEP 54
+2024-09-19 00:30:06,006 [BombeRLeWorld] INFO: Agent <rule_based_agent> chose action UP in 0.00s.
+2024-09-19 00:30:06,006 [BombeRLeWorld] INFO: Agent <rule_based_agent> stayed within acceptable think time.
+2024-09-19 00:30:06,006 [BombeRLeWorld] INFO: Agent <coin_collector_agent> chose action UP in 0.00s.
+2024-09-19 00:30:06,006 [BombeRLeWorld] INFO: Agent <coin_collector_agent> stayed within acceptable think time.
+2024-09-19 00:30:06,107 [BombeRLeWorld] INFO: STARTING STEP 55
+2024-09-19 00:30:06,110 [BombeRLeWorld] INFO: Agent <coin_collector_agent> chose action RIGHT in 0.00s.
+2024-09-19 00:30:06,110 [BombeRLeWorld] INFO: Agent <coin_collector_agent> stayed within acceptable think time.
+2024-09-19 00:30:06,110 [BombeRLeWorld] INFO: Agent <rule_based_agent> chose action BOMB in 0.00s.
+2024-09-19 00:30:06,110 [BombeRLeWorld] INFO: Agent <rule_based_agent> stayed within acceptable think time.
+2024-09-19 00:30:06,110 [BombeRLeWorld] INFO: Agent <rule_based_agent> drops bomb at (3, 11)
+2024-09-19 00:30:06,208 [BombeRLeWorld] INFO: STARTING STEP 56
+2024-09-19 00:30:06,213 [BombeRLeWorld] INFO: Agent <rule_based_agent> chose action DOWN in 0.00s.
+2024-09-19 00:30:06,213 [BombeRLeWorld] INFO: Agent <rule_based_agent> stayed within acceptable think time.
+2024-09-19 00:30:06,213 [BombeRLeWorld] INFO: Agent <coin_collector_agent> chose action RIGHT in 0.00s.
+2024-09-19 00:30:06,213 [BombeRLeWorld] INFO: Agent <coin_collector_agent> stayed within acceptable think time.
+2024-09-19 00:30:06,309 [BombeRLeWorld] INFO: STARTING STEP 57
+2024-09-19 00:30:06,313 [BombeRLeWorld] INFO: Agent <coin_collector_agent> chose action RIGHT in 0.00s.
+2024-09-19 00:30:06,313 [BombeRLeWorld] INFO: Agent <coin_collector_agent> stayed within acceptable think time.
+2024-09-19 00:30:06,313 [BombeRLeWorld] INFO: Agent <rule_based_agent> chose action DOWN in 0.00s.
+2024-09-19 00:30:06,313 [BombeRLeWorld] INFO: Agent <rule_based_agent> stayed within acceptable think time.
+2024-09-19 00:30:06,413 [BombeRLeWorld] INFO: STARTING STEP 58
+2024-09-19 00:30:06,417 [BombeRLeWorld] INFO: Agent <coin_collector_agent> chose action BOMB in 0.00s.
+2024-09-19 00:30:06,417 [BombeRLeWorld] INFO: Agent <coin_collector_agent> stayed within acceptable think time.
+2024-09-19 00:30:06,417 [BombeRLeWorld] INFO: Agent <coin_collector_agent> drops bomb at (8, 3)
+2024-09-19 00:30:06,417 [BombeRLeWorld] INFO: Agent <rule_based_agent> chose action DOWN in 0.00s.
+2024-09-19 00:30:06,417 [BombeRLeWorld] INFO: Agent <rule_based_agent> stayed within acceptable think time.
+2024-09-19 00:30:06,510 [BombeRLeWorld] INFO: STARTING STEP 59
+2024-09-19 00:30:06,516 [BombeRLeWorld] INFO: Agent <rule_based_agent> chose action DOWN in 0.00s.
+2024-09-19 00:30:06,516 [BombeRLeWorld] INFO: Agent <rule_based_agent> stayed within acceptable think time.
+2024-09-19 00:30:06,516 [BombeRLeWorld] INFO: Agent <coin_collector_agent> chose action LEFT in 0.00s.
+2024-09-19 00:30:06,516 [BombeRLeWorld] INFO: Agent <coin_collector_agent> stayed within acceptable think time.
+2024-09-19 00:30:06,516 [BombeRLeWorld] INFO: Agent <rule_based_agent>'s bomb at (3, 11) explodes
+2024-09-19 00:30:06,516 [BombeRLeWorld] INFO: Coin found at (2, 11)

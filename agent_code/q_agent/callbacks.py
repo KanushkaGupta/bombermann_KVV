@@ -1,11 +1,130 @@
-
-
+import logging
 import numpy as np
 import random
 from collections import defaultdict
 import pickle
 import os
 from .utils import get_new_position, will_be_in_blast
+
+def setup(self):
+    """
+    Initialize the Q-Learning agent's parameters and Q-Table.
+    """
+    # Initialize logger
+    self.logger = logging.getLogger(__name__)
+    handler = logging.StreamHandler()
+    formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+    handler.setFormatter(formatter)
+    self.logger.addHandler(handler)
+    self.logger.setLevel(logging.DEBUG)
+
+    # Initialize Q-Table as a defaultdict with zero arrays for each state
+    self.q_table = defaultdict(lambda: np.zeros(6))  # 6 possible actions
+
+    # Q-Learning parameters
+    self.alpha = 0.1       # Learning rate
+    self.gamma = 0.9       # Discount factor
+    self.epsilon = 1.0     # Exploration rate
+    self.epsilon_min = 0.1
+    self.epsilon_decay = 0.995
+
+    # Initialize last state and action
+    self.last_state = None
+    self.last_action = None
+
+    # Path to save/load Q-Table based on agent's directory
+    current_dir = os.path.dirname(__file__)
+    self.q_table_path = os.path.join(current_dir, 'q_table.pkl')
+
+    # Ensure the directory exists
+    os.makedirs(current_dir, exist_ok=True)
+
+    # Load existing Q-Table if available
+    if os.path.exists(self.q_table_path):
+        try:
+            with open(self.q_table_path, 'rb') as f:
+                loaded_q_table = pickle.load(f)
+            # Convert loaded Q-Table to defaultdict
+            self.q_table = defaultdict(lambda: np.zeros(6), loaded_q_table)
+            self.logger.info("Loaded existing Q-Table.")
+        except Exception as e:
+            self.logger.error(f"Failed to load Q-Table: {e}")
+            self.q_table = defaultdict(lambda: np.zeros(6))
+    else:
+        self.logger.info("Initialized new Q-Table.")
+
+    self.logger.info("Q-Learning Agent setup complete.")
+
+def act(self, game_state: dict):
+    """
+    Decide the next action based on the current game state.
+    """
+    state_features = state_to_features(game_state)
+    if state_features is None:
+        return 'WAIT'  # Default action if state is invalid
+
+    state = tuple(state_features)  # Convert to tuple for Q-Table key
+
+    # Update Q-Table with the reward from the previous action
+    if self.last_state is not None and self.last_action is not None:
+        # Reward is zero by default; actual reward is set in observation callback
+        reward = 0
+        update_q_table(self, self.last_state, self.last_action, reward, state)
+
+    # Choose action using ε-greedy policy
+    if random.random() < self.epsilon:
+        action = random.choice(['UP', 'DOWN', 'LEFT', 'RIGHT', 'BOMB', 'WAIT'])
+    else:
+        q_values = self.q_table[state]
+        max_q = np.max(q_values)
+        # Handle multiple actions with the same max Q-value
+        max_actions = [action for action, q in zip(['UP', 'DOWN', 'LEFT', 'RIGHT', 'BOMB', 'WAIT'], q_values) if q == max_q]
+        action = random.choice(max_actions)
+
+    # Update last state and action
+    self.last_state = state
+    self.last_action = ['UP', 'DOWN', 'LEFT', 'RIGHT', 'BOMB', 'WAIT'].index(action)
+
+    # Log the chosen action for debugging
+    self.logger.debug(f"State: {state}, Action: {action}, Epsilon: {self.epsilon}")
+
+    return action
+
+def observation(self, game_state: dict):
+    """
+    Receive reward and update Q-Table based on the observed outcome.
+    """
+    if self.last_state is None or self.last_action is None:
+        return  # No previous action to update
+
+    # Extract the reward from the game state
+    reward = game_state.get('reward', 0)
+
+    # Get the current state after action
+    current_state_features = state_to_features(game_state)
+    if current_state_features is not None:
+        current_state = tuple(current_state_features)
+    else:
+        current_state = self.last_state  # If invalid, use last state
+
+    # Update Q-Table with the actual reward
+    update_q_table(self, self.last_state, self.last_action, reward, current_state)
+
+    # Reset last state and action
+    self.last_state = None
+    self.last_action = None
+
+def end(self, game_state: dict):
+    """
+    Called at the end of the game to perform any cleanup or final updates.
+    """
+    # Optionally, save the Q-Table at the end of the game
+    try:
+        with open(self.q_table_path, 'wb') as f:
+            pickle.dump(dict(self.q_table), f)
+        self.logger.info("Q-Table saved successfully at the end of the game.")
+    except Exception as e:
+        self.logger.error(f"Failed to save Q-Table: {e}")
 
 def state_to_features(game_state: dict) -> np.ndarray:
     """
@@ -133,47 +252,6 @@ def state_to_features(game_state: dict) -> np.ndarray:
     features_array = np.array(features, dtype=int)
     return features_array
 
-def setup(self):
-    """
-    Initialize the Q-Learning agent's parameters and Q-Table.
-    """
-    # Initialize Q-Table as a defaultdict with zero arrays for each state
-    self.q_table = defaultdict(lambda: np.zeros(6))  # 6 possible actions
-
-    # Q-Learning parameters
-    self.alpha = 0.1       # Learning rate
-    self.gamma = 0.9       # Discount factor
-    self.epsilon = 1.0     # Exploration rate
-    self.epsilon_min = 0.1
-    self.epsilon_decay = 0.995
-
-    # Initialize last state and action
-    self.last_state = None
-    self.last_action = None
-
-    # Path to save/load Q-Table based on agent's directory
-    current_dir = os.path.dirname(__file__)
-    self.q_table_path = os.path.join(current_dir, 'q_table.pkl')
-
-    # Ensure the directory exists
-    os.makedirs(current_dir, exist_ok=True)
-
-    # Load existing Q-Table if available
-    if os.path.exists(self.q_table_path):
-        try:
-            with open(self.q_table_path, 'rb') as f:
-                loaded_q_table = pickle.load(f)
-            # Convert loaded Q-Table to defaultdict
-            self.q_table = defaultdict(lambda: np.zeros(6), loaded_q_table)
-            self.logger.info("Loaded existing Q-Table.")
-        except Exception as e:
-            self.logger.error(f"Failed to load Q-Table: {e}")
-            self.q_table = defaultdict(lambda: np.zeros(6))
-    else:
-        self.logger.info("Initialized new Q-Table.")
-
-    self.logger.info("Q-Learning Agent setup complete.")
-
 def update_q_table(self, state, action, reward, next_state):
     """
     Update the Q-Table using the Q-Learning update rule.
@@ -187,41 +265,6 @@ def update_q_table(self, state, action, reward, next_state):
     # Decay epsilon
     if self.epsilon > self.epsilon_min:
         self.epsilon *= self.epsilon_decay
-
-def act(self, game_state: dict):
-    """
-    Decide the next action based on the current game state.
-    """
-    state_features = state_to_features(game_state)
-    if state_features is None:
-        return 'WAIT'  # Default action if state is invalid
-
-    state = tuple(state_features)  # Convert to tuple for Q-Table key
-
-    # Update Q-Table with the reward from the previous action
-    if self.last_state is not None and self.last_action is not None:
-        # Reward is zero by default; actual reward is set in train.py
-        reward = 0
-        update_q_table(self, self.last_state, self.last_action, reward, state)
-
-    # Choose action using ε-greedy policy
-    if random.random() < self.epsilon:
-        action = random.choice(['UP', 'DOWN', 'LEFT', 'RIGHT', 'BOMB', 'WAIT'])
-    else:
-        q_values = self.q_table[state]
-        max_q = np.max(q_values)
-        # Handle multiple actions with the same max Q-value
-        max_actions = [action for action, q in zip(['UP', 'DOWN', 'LEFT', 'RIGHT', 'BOMB', 'WAIT'], q_values) if q == max_q]
-        action = random.choice(max_actions)
-
-    # Update last state and action
-    self.last_state = state
-    self.last_action = ['UP', 'DOWN', 'LEFT', 'RIGHT', 'BOMB', 'WAIT'].index(action)
-
-    # Log the chosen action for debugging
-    self.logger.debug(f"State: {state}, Action: {action}, Epsilon: {self.epsilon}")
-
-    return action
 
 def callbacks_setup(*args, **kwargs):
     """
@@ -237,3 +280,19 @@ def callbacks_act(*args, **kwargs):
     self = args[0]
     game_state = args[1]
     return act(self, game_state)
+
+def callbacks_observation(*args, **kwargs):
+    """
+    Wrapper function to handle observations and rewards.
+    """
+    self = args[0]
+    game_state = args[1]
+    observation(self, game_state)
+
+def callbacks_end(*args, **kwargs):
+    """
+    Wrapper function to handle end of game.
+    """
+    self = args[0]
+    game_state = args[1]
+    end(self, game_state)

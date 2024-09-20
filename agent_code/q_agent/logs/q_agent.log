@@ -1,7 +1,0 @@
-2024-09-17 23:28:50,283 [q_agent_code] INFO: Loaded existing Q-Table.
-2024-09-17 23:28:50,283 [q_agent_code] INFO: Q-Learning Agent setup complete.
-2024-09-17 23:28:50,912 [q_agent_code] DEBUG: State: (-1, 0, 0, -1, 1, -1, 0, 0, 1, 1, 0, -1, 0, 0, 0, -1, 2, 0, 0, 0), Action: BOMB, Epsilon: 1.0
-2024-09-17 23:28:50,929 [q_agent_code] DEBUG: State: (-1, 0, 0, -1, 0, -1, 0, 0, 1, 1, 0, -1, 1, 0, 1, 1, 2, 1, 0, 0), Action: BOMB, Epsilon: 0.995
-2024-09-17 23:28:51,029 [q_agent_code] DEBUG: State: (-1, 0, 0, -1, 0, -1, 0, 0, 1, 1, 0, -1, 1, 0, 1, 0, 2, 1, 0, 0), Action: LEFT, Epsilon: 0.990025
-2024-09-17 23:28:51,144 [q_agent_code] DEBUG: State: (-1, 0, 0, -1, 0, -1, 0, 0, 1, 1, 0, -1, 1, 0, 1, 0, 2, 1, 0, 0), Action: BOMB, Epsilon: 0.985074875
-2024-09-17 23:28:51,241 [q_agent_code] DEBUG: State: (-1, 0, 0, -1, 0, -1, 0, 0, 1, 1, 0, -1, 1, 0, 1, 0, 2, 1, 0, 0), Action: UP, Epsilon: 0.9801495006250001
