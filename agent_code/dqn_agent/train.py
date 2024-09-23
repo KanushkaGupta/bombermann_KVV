@@ -6,9 +6,9 @@ from typing import List
 import os
 from . import common
 import events as e
-from .callbacks import compute_blast_zone
+from .common import compute_blast_zone  
 
-previous_positions = []  # Track previous positions to penalize repetition
+previous_positions = []  # Monitor past positions to penalize repeated actions.
 
 def setup_training(self):
     self.logger.info("Training-specific setup completed.")
@@ -16,22 +16,22 @@ def setup_training(self):
 def game_events_occurred(self, old_game_state: dict, self_action: str, new_game_state: dict, events: List[str]):
     current_position = new_game_state['self'][-1]
 
-    # Penalize repetitive behavior
+    # Impose penalties for repetitive behavior.
     if len(previous_positions) > 5 and current_position in previous_positions[-5:]:
         events.append('REPEATED_ACTION')
 
-    # Update position history
+    # Refresh the position history.
     previous_positions.append(current_position)
 
     reward = reward_from_events(events, new_game_state)
 
-    # Convert game states to features
+    # Transform game states into features.
     state = common.state_to_features(old_game_state)
     next_state = common.state_to_features(new_game_state)
 
     action = common.ACTIONS.index(self_action)
 
-    # Store experience
+    # Save the experience.
     common.memory.append((state, action, reward, next_state))
 
     if len(common.memory) >= common.BATCH_SIZE:
@@ -80,7 +80,7 @@ def reward_from_events(events: List[str], game_state) -> float:
     for event in events:
         reward += game_rewards.get(event, 0)
 
-    # Penalize being close to bombs about to explode
+    # Impose penalties for being near bombs that are about to detonate.
     agent_x, agent_y = game_state['self'][-1]
     bombs = game_state['bombs']
     field = game_state['field']
@@ -94,7 +94,6 @@ def reward_from_events(events: List[str], game_state) -> float:
 
     return reward
 
-
 def save_model(path="dqn_model.pth"):
     if common.model is not None:
         current_dir = os.path.dirname(os.path.abspath(__file__))
@@ -107,10 +106,6 @@ def save_model(path="dqn_model.pth"):
 def update_target_model():
     common.target_model.load_state_dict(common.model.state_dict())
     common.target_model.eval()
-
-# train.py
-
-# ... [rest of your imports and code] ...
 
 def replay(self):
     batch = random.sample(common.memory, common.BATCH_SIZE)
@@ -141,11 +136,10 @@ def replay(self):
     loss.backward()
     common.optimizer.step()
 
-    self.logger.info(f"Training loss: {loss.item()}")  # Moved after loss is defined
+    self.logger.info(f"Training loss: {loss.item()}")
 
     common.steps_done += 1
     if common.steps_done % common.TARGET_UPDATE == 0:
         update_target_model()
         self.logger.info("Target network updated.")
-
-
+        

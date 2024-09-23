@@ -4,8 +4,9 @@ import random
 from . import common
 import events as e
 from collections import deque
+from .common import will_be_in_blast, compute_blast_zone  
 
-# Track previous positions to avoid repetitive behavior
+#Monitor past positions to prevent repetitive actions.
 previous_positions = []
 
 def setup(self):
@@ -16,7 +17,7 @@ def setup(self):
     input_dim = 18  
     output_dim = len(common.ACTIONS)
 
-    # Initialize the main DQN and target DQN
+    # Set up the primary DQN and the target DQN.
     common.model = common.DQN(input_dim, output_dim).to(common.DEVICE)
     common.target_model = common.DQN(input_dim, output_dim).to(common.DEVICE)
     common.target_model.load_state_dict(common.model.state_dict())
@@ -36,14 +37,14 @@ def act(self, game_state: dict) -> str:
     """
     epsilon = common.epsilon
 
-    # Convert game state to features
+    # Transform the game state into features.
     features = common.state_to_features(game_state)
     if features is None:
         return 'WAIT'  # Default action
 
     state_tensor = torch.tensor(features, dtype=torch.float32).unsqueeze(0).to(common.DEVICE)
 
-    # Extract bomb-related information from game_state
+    # Retrieve bomb-related details from the game state.
     agent_x, agent_y = game_state['self'][-1]
     bombs = game_state['bombs']
 
@@ -57,14 +58,14 @@ def act(self, game_state: dict) -> str:
         bomb_distance = float('inf')
         bomb_countdown = float('inf')
 
-    # Prioritize escaping if near a bomb about to explode
+    # Gather bomb-related information from the game state.
     if bomb_countdown <= 2 and bomb_distance <= 3:
         action = safe_move(game_state)
         if action:
             self.logger.debug(f"Escaping bomb: Chose safe action {action}")
             return action
         else:
-            return 'WAIT'  # If no escape is found, wait as fallback
+            return 'WAIT'  # If no escape route is available, wait as a backup option.
 
     # Epsilon-greedy action selection for exploration/exploitation
     if random.random() < epsilon:
@@ -77,7 +78,7 @@ def act(self, game_state: dict) -> str:
             action = common.ACTIONS[action_idx]
             self.logger.debug(f"Exploitation: Chose action {action} with Q-value {q_values[0][action_idx].item()}")
 
-    # Safety check before placing a bomb
+    # Conduct a safety check prior to bomb placement.
     if action == 'BOMB' and not is_safe_to_place_bomb(game_state):
         action = 'WAIT'  # Or choose a different safe action
         self.logger.debug("Decided not to place bomb due to safety concerns.")
@@ -92,7 +93,7 @@ def is_within_blast(agent_position, bomb_position):
     x_a, y_a = agent_position
     x_b, y_b = bomb_position
 
-    # Bomb explodes in a 3-tile radius (horizontally and vertically)
+    #The bomb detonates within a 3-tile radius both horizontally and vertically.
     return (x_a == x_b and abs(y_a - y_b) <= 3) or (y_a == y_b and abs(x_a - x_b) <= 3)
 
 def safe_move(game_state):
@@ -117,50 +118,6 @@ def safe_move(game_state):
 
     return best_move if best_move else None
 
-def will_be_in_blast(position, game_state, time_step=0):
-    """
-    Determine if a given position will be in the blast radius at a specific time step.
-    
-    Args:
-        position (tuple): (x, y) coordinates of the position to check.
-        game_state (dict): Current game state.
-        time_step (int): The time step to consider for bomb explosions.
-    
-    Returns:
-        bool: True if the position is within any blast radius at the given time step, False otherwise.
-    """
-    x, y = position
-    field = game_state['field']
-    bombs = game_state['bombs']
-
-    for bomb_pos, countdown in bombs:
-        explosion_time = countdown  # Bomb will explode when countdown reaches 0
-        steps_until_explosion = explosion_time - time_step
-        if steps_until_explosion != 0:
-            continue  # Bomb does not explode at this time step
-
-        # Compute the blast zone considering walls
-        blast_positions = compute_blast_zone(bomb_pos, field)
-        if position in blast_positions:
-            return True
-    return False
-
-def compute_blast_zone(bomb_pos, field):
-    x_bomb, y_bomb = bomb_pos
-    blast_positions = [bomb_pos]
-    directions = [(-1,0), (1,0), (0,-1), (0,1)]
-    for dx, dy in directions:
-        for i in range(1, 4):  # Blast range is 3 tiles
-            x, y = x_bomb + i*dx, y_bomb + i*dy
-            if x < 0 or x >= field.shape[0] or y < 0 or y >= field.shape[1]:
-                break  # Out of bounds
-            if field[x, y] == -1:  # Stone wall blocks blast
-                break
-            blast_positions.append((x, y))
-            if field[x, y] == 1:  # Crate blocks blast beyond this point
-                break
-    return blast_positions
-
 def is_safe_position(position, game_state):
     x, y = position
     field = game_state['field']
@@ -170,9 +127,9 @@ def is_safe_position(position, game_state):
         return False
 
     if explosion_map[x, y] != 0:
-        return False  # Position is in an explosion zone
+        return False  # The position is located within the explosion area.
 
-    # Check if the position will be in the blast radius of any bomb
+    # Verify if the position falls within the blast radius of any bomb.
     if will_be_in_blast(position, game_state):
         return False
 
@@ -197,15 +154,15 @@ def can_agent_escape(agent_position, game_state, max_depth=10):
             continue
         visited.add((position, step))
 
-        # Check if position is safe at this time step
+        # Determine if the position is safe at this time step.
         if will_be_in_blast(position, game_state, time_step=step):
             continue
 
-        # If we have survived past all bomb explosions
+        # If we have survived all previous bomb explosions.
         if step > max_bomb_timer:
             return True
 
-        # Explore adjacent tiles, including waiting in place
+        # Investigate neighboring tiles, including remaining in the current position.
         for dx, dy in [(-1, 0), (1, 0), (0, -1), (0, 1), (0, 0)]:  # Include 'WAIT'
             x, y = position[0] + dx, position[1] + dy
             if not (0 <= x < field.shape[0] and 0 <= y < field.shape[1]):
@@ -214,7 +171,7 @@ def can_agent_escape(agent_position, game_state, max_depth=10):
                 continue  # Not a free tile
             queue.append(((x, y), step + 1))
 
-    return False  # No escape path found
+    return False  # No escape route has been identified.
 
 def is_safe_to_place_bomb(game_state):
     agent_position = game_state['self'][-1]
@@ -223,10 +180,10 @@ def is_safe_to_place_bomb(game_state):
     explosion_map = game_state['explosion_map']
     others = game_state['others']
 
-    # Simulate bomb placement
+    # Perform a simulation of bomb placement.
     simulated_bombs = bombs.copy() + [(agent_position, 4)]  # Bomb countdown starts at 4
     simulated_game_state = game_state.copy()
     simulated_game_state['bombs'] = simulated_bombs
 
-    # Check if agent can escape
+    # Determine if the agent can escape.
     return can_agent_escape(agent_position, simulated_game_state, max_depth=10)

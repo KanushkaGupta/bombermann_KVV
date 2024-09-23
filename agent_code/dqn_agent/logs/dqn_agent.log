@@ -1,54 +1,20 @@
-2024-09-17 21:04:03,308 [dqn_agent_code] INFO: DQN Agent setup complete.
-2024-09-17 21:04:04,025 [dqn_agent_code] DEBUG: Exploitation: Chose action BOMB with Q-value 0.15663549304008484
-2024-09-17 21:04:04,026 [dqn_agent_code] DEBUG: Decided not to place bomb due to safety concerns.
-2024-09-17 21:04:04,043 [dqn_agent_code] DEBUG: Exploration: Chose random action DOWN
-2024-09-17 21:04:04,140 [dqn_agent_code] DEBUG: Exploration: Chose random action DOWN
-2024-09-17 21:04:04,245 [dqn_agent_code] DEBUG: Exploitation: Chose action BOMB with Q-value 0.15663549304008484
-2024-09-17 21:04:04,246 [dqn_agent_code] DEBUG: Decided not to place bomb due to safety concerns.
-2024-09-17 21:04:04,345 [dqn_agent_code] DEBUG: Exploration: Chose random action BOMB
-2024-09-17 21:04:04,346 [dqn_agent_code] DEBUG: Decided not to place bomb due to safety concerns.
-2024-09-17 21:04:04,449 [dqn_agent_code] DEBUG: Exploration: Chose random action DOWN
-2024-09-17 21:04:04,547 [dqn_agent_code] DEBUG: Exploration: Chose random action BOMB
-2024-09-17 21:04:04,548 [dqn_agent_code] DEBUG: Decided not to place bomb due to safety concerns.
-2024-09-17 21:04:04,643 [dqn_agent_code] DEBUG: Exploitation: Chose action BOMB with Q-value 0.15663549304008484
-2024-09-17 21:04:04,643 [dqn_agent_code] DEBUG: Decided not to place bomb due to safety concerns.
-2024-09-17 21:04:04,749 [dqn_agent_code] DEBUG: Exploration: Chose random action WAIT
-2024-09-17 21:04:04,845 [dqn_agent_code] DEBUG: Exploration: Chose random action RIGHT
-2024-09-17 21:04:04,951 [dqn_agent_code] DEBUG: Exploitation: Chose action BOMB with Q-value 0.15663549304008484
-2024-09-17 21:04:04,952 [dqn_agent_code] DEBUG: Decided not to place bomb due to safety concerns.
-2024-09-17 21:04:05,050 [dqn_agent_code] DEBUG: Exploitation: Chose action BOMB with Q-value 0.15663549304008484
-2024-09-17 21:04:05,051 [dqn_agent_code] DEBUG: Decided not to place bomb due to safety concerns.
-2024-09-17 21:04:05,151 [dqn_agent_code] DEBUG: Exploration: Chose random action UP
-2024-09-17 21:04:05,252 [dqn_agent_code] DEBUG: Exploitation: Chose action BOMB with Q-value 0.09194332361221313
-2024-09-17 21:04:05,353 [dqn_agent_code] DEBUG: Exploitation: Chose action BOMB with Q-value 0.1611148715019226
-2024-09-17 21:04:05,453 [dqn_agent_code] DEBUG: Escaping bomb: Chose safe action DOWN
-2024-09-17 21:04:05,552 [dqn_agent_code] DEBUG: Escaping bomb: Chose safe action LEFT
-2024-09-17 21:04:05,654 [dqn_agent_code] DEBUG: Escaping bomb: Chose safe action LEFT
-2024-09-17 21:04:05,756 [dqn_agent_code] DEBUG: Exploration: Chose random action BOMB
-2024-09-17 21:04:05,856 [dqn_agent_code] DEBUG: Exploration: Chose random action RIGHT
-2024-09-17 21:04:05,958 [dqn_agent_code] DEBUG: Exploitation: Chose action BOMB with Q-value 0.12942376732826233
-2024-09-17 21:04:06,058 [dqn_agent_code] DEBUG: Exploration: Chose random action RIGHT
-2024-09-17 21:04:06,157 [dqn_agent_code] DEBUG: Escaping bomb: Chose safe action UP
-2024-09-17 21:04:06,260 [dqn_agent_code] DEBUG: Escaping bomb: Chose safe action UP
-2024-09-17 21:04:06,358 [dqn_agent_code] DEBUG: Escaping bomb: Chose safe action UP
-2024-09-17 21:04:06,462 [dqn_agent_code] DEBUG: Exploration: Chose random action RIGHT
-2024-09-17 21:04:06,563 [dqn_agent_code] DEBUG: Exploitation: Chose action BOMB with Q-value 0.10513923317193985
-2024-09-17 21:04:06,665 [dqn_agent_code] DEBUG: Exploitation: Chose action BOMB with Q-value 0.11636880785226822
-2024-09-17 21:04:06,765 [dqn_agent_code] DEBUG: Exploration: Chose random action DOWN
-2024-09-17 21:04:06,865 [dqn_agent_code] DEBUG: Escaping bomb: Chose safe action DOWN
-2024-09-17 21:04:06,963 [dqn_agent_code] DEBUG: Escaping bomb: Chose safe action DOWN
-2024-09-17 21:04:07,066 [dqn_agent_code] DEBUG: Escaping bomb: Chose safe action LEFT
-2024-09-17 21:04:07,167 [dqn_agent_code] DEBUG: Exploration: Chose random action BOMB
-2024-09-17 21:04:07,277 [dqn_agent_code] DEBUG: Exploitation: Chose action BOMB with Q-value 0.14441147446632385
-2024-09-17 21:04:07,383 [dqn_agent_code] DEBUG: Exploitation: Chose action BOMB with Q-value 0.12942376732826233
-2024-09-17 21:04:07,469 [dqn_agent_code] DEBUG: Exploration: Chose random action DOWN
-2024-09-17 21:04:07,570 [dqn_agent_code] DEBUG: Escaping bomb: Chose safe action RIGHT
-2024-09-17 21:04:07,674 [dqn_agent_code] DEBUG: Escaping bomb: Chose safe action UP
-2024-09-17 21:04:07,782 [dqn_agent_code] DEBUG: Escaping bomb: Chose safe action UP
-2024-09-17 21:04:07,871 [dqn_agent_code] DEBUG: Exploitation: Chose action BOMB with Q-value 0.11716094613075256
-2024-09-17 21:04:07,974 [dqn_agent_code] DEBUG: Exploration: Chose random action UP
-2024-09-17 21:04:08,073 [dqn_agent_code] DEBUG: Exploration: Chose random action UP
-2024-09-17 21:04:08,176 [dqn_agent_code] DEBUG: Exploitation: Chose action BOMB with Q-value 0.1449277698993683
-2024-09-17 21:04:08,277 [dqn_agent_code] DEBUG: Exploration: Chose random action WAIT
-2024-09-17 21:04:08,375 [dqn_agent_code] DEBUG: Escaping bomb: Chose safe action UP
-2024-09-17 21:04:08,477 [dqn_agent_code] DEBUG: Escaping bomb: Chose safe action UP
+2024-09-23 19:26:49,643 [dqn_agent_code] INFO: DQN Agent setup complete.
+2024-09-23 19:26:50,102 [dqn_agent_code] DEBUG: Exploration: Chose random action DOWN
+2024-09-23 19:26:50,148 [dqn_agent_code] DEBUG: Exploration: Chose random action DOWN
+2024-09-23 19:26:50,256 [dqn_agent_code] DEBUG: Exploration: Chose random action RIGHT
+2024-09-23 19:26:50,359 [dqn_agent_code] DEBUG: Exploration: Chose random action UP
+2024-09-23 19:26:50,459 [dqn_agent_code] DEBUG: Exploitation: Chose action DOWN with Q-value 1.074390172958374
+2024-09-23 19:26:50,557 [dqn_agent_code] DEBUG: Exploitation: Chose action DOWN with Q-value 1.1116803884506226
+2024-09-23 19:26:50,661 [dqn_agent_code] DEBUG: Exploration: Chose random action BOMB
+2024-09-23 19:26:50,762 [dqn_agent_code] DEBUG: Exploration: Chose random action RIGHT
+2024-09-23 19:26:50,861 [dqn_agent_code] DEBUG: Escaping bomb: Chose safe action LEFT
+2024-09-23 19:26:50,961 [dqn_agent_code] DEBUG: Escaping bomb: Chose safe action UP
+2024-09-23 19:26:51,164 [dqn_agent_code] DEBUG: Exploration: Chose random action BOMB
+2024-09-23 19:26:51,269 [dqn_agent_code] DEBUG: Exploitation: Chose action DOWN with Q-value 1.4127705097198486
+2024-09-23 19:26:51,366 [dqn_agent_code] DEBUG: Exploitation: Chose action DOWN with Q-value 1.6921849250793457
+2024-09-23 19:26:51,469 [dqn_agent_code] DEBUG: Exploitation: Chose action DOWN with Q-value 1.582484245300293
+2024-09-23 19:26:51,568 [dqn_agent_code] DEBUG: Exploitation: Chose action DOWN with Q-value 1.599772334098816
+2024-09-23 19:26:51,669 [dqn_agent_code] DEBUG: Exploitation: Chose action DOWN with Q-value 1.622053861618042
+2024-09-23 19:26:51,769 [dqn_agent_code] DEBUG: Exploration: Chose random action BOMB
+2024-09-23 19:26:51,870 [dqn_agent_code] DEBUG: Exploration: Chose random action DOWN
+2024-09-23 19:26:51,974 [dqn_agent_code] DEBUG: Escaping bomb: Chose safe action UP
